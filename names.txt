@@ -1,0 +1,106 @@
+/// Words that end with # are marked as first-word-only. It's needed for technical reasons.
+
+// Words that end with * are marked as second-word-only. It’s needed for technical reasons.
+
+/// Lines like these that *START* with "//" are comments and are ignored by the program. You can use it for taking notes
+
+/// You can "disable" words without outright deleting them (best that way) by preceding the word by "//". For example "//DisabledWord".
+
+/// This entire document is what my program will have as input. Add words, enable, disable, and take notes as you please.
+
+/// Current program rules: maximum of 14 characters, no alliterations allowed (the second word cannot start by the same letter the first word starts or ends with), and some words always come first or after (see above).
+
+// Link to the permutations that are created with the currently enabled words: Default perms
+
+// —-------------------------------------- \\
+
+//Autistic#
+//Autumn
+//Blackflame
+//Catharsis
+//Cathartic#
+//Cynical#
+//DarkOne
+//Kindred
+//Nova
+//Rumple
+//Saboteur
+//Sentry
+//Shadowed#
+//Stasis
+//Tactical#
+//Warlock
+//Wraith
+Abyss*
+Anthem*
+Arc
+Arch#
+Ascent*
+Betrayer*
+Bleak#
+Blighted#
+Blurry#
+Caustic#
+Cavalry*
+Charged#
+Cosmic#
+Crucible*
+Cynic
+Dark#
+Demon*
+Demonic#
+Dracorex
+Dream
+Duelist*
+Echo
+Elegance*
+Elf
+Elite#
+Envoy*
+Eternal#
+Existence*
+Exotic#
+Hornet*
+Justicar
+Kaiden
+Legion*
+LegionOf#
+Mage*
+Mantis*
+Neural#
+Night
+Nox
+Occult#
+Omen*
+Onyx*
+Oracle
+Paradox*
+Phantom
+Phoenix*
+Plasma
+Quake*
+Quirky#
+Raider*
+Regal#
+Revenant
+Ronin*
+Runebear
+Shade
+Shady#
+Sinister#
+Siren*
+Spectrum*
+Spirit
+Static#
+Synergy*
+Treason
+Viper*
+Vision*
+Void
+Vortex*
+Warhawk*
+Warp*
+Warped#
+Zen*
+
+// —----------------------------------- \\
