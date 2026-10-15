@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a small utility to generate usernames by reading a file containing eligible words and finding all the possible combinations of two words with a limit of 14 characters, as that pertains to Call of Duty.
+This is a small utility to generate usernames by reading a file containing eligible words and finding all the possible combinations of two words with a user-definable character limit. Originally this was created in order to create usernames for Call of Duty, which had a limit of 14 characters, but it can be used with any limit or none at all.
 
 ## Rules for permutations
 
