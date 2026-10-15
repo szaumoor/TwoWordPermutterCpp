@@ -6,7 +6,7 @@ This is a small utility to generate usernames by reading a file containing eligi
 
 ## Rules for permutations
 
-Check names.txt for an explanation. In short, each word must be on a separate line. Lines that start with "//" are skipped. Words that end with "#"
+Check names.txt for an explanation. In short, each word must be on a separate line. Lines that start with "//" are skipped. Words that end with "#" are considered "first-word-only", and those that end with "*" are "second-word-only".
 
 ## How to use
 
