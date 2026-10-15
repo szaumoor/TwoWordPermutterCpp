@@ -1,15 +1,41 @@
-#include "io.h"
-#include "text.h"
-#include "console.h"
+#include "io.hpp"
+#include "text.hpp"
 
+#include <iostream>
+#include <string>
 #include <vector>
 
-int main() {
-    std::string line = console::file_input();
-    console::exit_if_q( line );
-    const int limit = console::get_char_limit();
-    const auto filename = console::get_name( line );
+#include "console.hpp"
 
-    const std::vector<std::string> perms = GeneratePermutations( io_utils::GetWords( line ), limit );
-    io_utils::WritePerms(std::to_string(console::nanos()) + "_" + filename, perms );
+int main( const int argc, const char* argv[] )
+{
+    const auto resolved_args = console::parse_args(argc, argv);
+    if (not resolved_args)
+    {
+        std::cerr << resolved_args.error() << '\n';
+        return EXIT_FAILURE;
+    }
+
+    const auto& [path, char_limit] = resolved_args.value();
+    const auto extracted_words = io::get_words( path );
+
+    if (not extracted_words)
+    {
+        std::cerr << extracted_words.error() << '\n';
+        return EXIT_FAILURE;
+    }
+
+    const auto permutations = text::generate_permutations( extracted_words.value(), char_limit );
+
+    const auto new_file_name = path.stem().string() + "_output" + "(" + std::to_string(char_limit) + ")_" + std::to_string(
+        io::nanos()) +  +".txt";
+
+    if ( const auto success = io::write_perms(path.parent_path() / new_file_name, permutations );
+         not success
+    ) {
+        std::cerr << success.error() << '\n';
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
 }
